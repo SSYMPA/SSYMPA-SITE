@@ -27,3 +27,30 @@ input,
 textarea {
   font-family: 'JetBrainsMono';
 }
+
+/* Ensuring full height */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .app {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 2px;
+  }
+}

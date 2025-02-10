@@ -10,25 +10,28 @@ import './index.scss';
 const Sidebar = () => {
   return (
     <div className='nav-bar'>
+      {/* Logo Section */}
       <Link className='logo' to='/'>
         <img className='logo-img' src={ssympa} alt="logo" />
         <div className='logo-name-container'>
           <img className='logo-name' src={ssympa_name} alt='company_name' />
         </div>
       </Link>
+
+      {/* Navigation Section */}
       <div className='back-box'>
         <nav>
           <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
-            <img src={home} alt="Home" className="home-icon" />
+            <img src={home} alt="Home" />
           </NavLink>
           <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>
-            <img src={call} alt="Contact" className="user-icon" />
+            <img src={call} alt="Contact" />
           </NavLink>
           <NavLink to="/mail" className={({ isActive }) => (isActive ? "active" : "")}>
-            <img src={mail} alt="Mail" className="mail-icon" />
+            <img src={mail} alt="Mail" />
           </NavLink>
           <NavLink to="/location" className={({ isActive }) => (isActive ? "active" : "")}>
-            <img src={location} alt="Location" className="location-icon" />
+            <img src={location} alt="Location" />
           </NavLink>
           <NavLink to="/create" className={({ isActive }) => (isActive ? "active text-button" : "text-button")}>
             Create

@@ -68,7 +68,8 @@
 /* Mobile and Tablet Adjustments */
 @media (max-width: 480px) {
     .mail-container {
-        padding: 5vw;
+        padding: 10vw;
+        transform: translate(8%, -6%);
     }
 
     .mail-heading {
@@ -77,10 +78,23 @@
 
     .mail-list {
         width: 100%;
+        gap: 1rem;
     }
 
     .mail-card {
-        padding: 4vw;
-        border-radius: 2vw;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 2vw;
+        border-radius: 1.5vw;
+        box-shadow: 0px 5px 2vw rgba(0, 255, 255, 0.4);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        text-align: center;
+        border: 0.2vw solid rgba(0, 255, 255, 0.6);
+    
+        &:hover {
+            box-shadow: 0px 5px 3vw rgba(0, 255, 255, 1);
+            transform: translateY(-0.7vw);
+            background: rgba(255, 255, 255, 0.2);
+        }
     }
 }
