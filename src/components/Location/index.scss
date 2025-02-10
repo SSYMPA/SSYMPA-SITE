@@ -1,0 +1,202 @@
+/* Default system font for a professional look */
+.location-container {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+    color: #333;
+    padding: 50px;
+    text-align: center;
+    max-width: 1100px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading with a bold, clean look */
+.location-heading {
+    font-size: 2.8rem; /* Increased size */
+    font-weight: 700;
+    color: #222;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Description styling */
+.location-description {
+    font-size: 1.4rem; /* Increased size */
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 20px auto;
+    color: #444;
+    animation: slideUp 1s ease-in-out;
+}
+
+/* Google Maps Embed */
+.location-map {
+    border: 0;
+    border-radius: 12px;
+    width: 100%;
+    height: 400px; /* Bigger map */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    animation: glowEffect 3s infinite alternate;
+}
+
+/* Box container for additional details */
+.location-details {
+    margin-top: 30px;
+    text-align: left;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Section headings */
+.location-details h2 {
+    font-size: 2rem; /* Increased size */
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+/* Content styling */
+.location-details p,
+.location-details ul {
+    font-size: 1.3rem; /* Increased size */
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Styled list items */
+.location-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.location-details ul li {
+    background: #f0f0f0;
+    padding: 12px 18px; /* Bigger padding */
+    margin: 6px 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.location-details ul li:hover {
+    transform: translateX(10px);
+    background: #e0e0e0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowEffect {
+    from {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .location-container {
+        padding: 40px;
+    }
+
+    .location-heading {
+        font-size: 2.5rem;
+    }
+
+    .location-description {
+        font-size: 1.2rem;
+    }
+
+    .location-map {
+        height: 350px;
+    }
+
+    .location-details h2 {
+        font-size: 1.8rem;
+    }
+
+    .location-details p,
+    .location-details ul {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .location-container {
+        padding: 35px;
+    }
+
+    .location-heading {
+        font-size: 2.2rem;
+    }
+
+    .location-description {
+        font-size: 1.1rem;
+    }
+
+    .location-map {
+        height: 320px;
+    }
+
+    .location-details h2 {
+        font-size: 1.6rem;
+    }
+
+    .location-details p,
+    .location-details ul {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .location-container {
+        padding: 25px;
+    }
+
+    .location-heading {
+        font-size: 2rem;
+    }
+
+    .location-description {
+        font-size: 1rem;
+    }
+
+    .location-map {
+        height: 280px;
+    }
+
+    .location-details h2 {
+        font-size: 1.4rem;
+    }
+
+    .location-details p,
+    .location-details ul {
+        font-size: 1rem;
+    }
+}

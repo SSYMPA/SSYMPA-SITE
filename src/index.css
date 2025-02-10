@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
+
+html {
+  font-size: 78.5%; /* 1rem = 10px */
+}
+
+body {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.1rem; /* 11px */
+  line-height: 1.4;
+  font-family: 'JetBrains Mono', sans-serif;
+  color: #b0afaf; /* Slightly lighter for better contrast */
+  background-color: #264653;
+  overflow: hidden;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

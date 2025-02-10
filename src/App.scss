@@ -1,0 +1,29 @@
+$primary-color: #ffd700;
+
+@import 'animate.css';
+  
+@font-face {
+  font-family: 'Oxanium';
+  src: url('./assets/font/Oxanium-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('./assets/font/JetBrainsMono-VariableFont_wght.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/font/Poppins-Thin.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+input,
+textarea {
+  font-family: 'JetBrainsMono';
+}

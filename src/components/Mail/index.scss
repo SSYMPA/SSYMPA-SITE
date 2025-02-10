@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+
+.mail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #264653;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    padding: 3vw; // Uses viewport width for better responsiveness
+}
+
+.mail-heading {
+    font-size: clamp(2rem, 5vw, 3.5rem); // Adjusts based on screen size
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 25px rgba(255, 255, 255, 0.9);
+    margin-bottom: 4vw;
+    letter-spacing: 2px;
+}
+
+.mail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    width: 90%;
+    max-width: 700px;
+}
+
+.mail-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2vw;
+    border-radius: 1.5vw;
+    box-shadow: 0px 5px 2vw rgba(0, 255, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    border: 0.2vw solid rgba(0, 255, 255, 0.6);
+
+    &:hover {
+        box-shadow: 0px 5px 3vw rgba(0, 255, 255, 1);
+        transform: translateY(-0.7vw);
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.mail-icon {
+    font-size: clamp(1.5rem, 3vw, 2.5rem); // Responsive icon size
+    color: #00eaff;
+    margin-bottom: 1vw;
+}
+
+.mail-address {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem); // Responsive email text
+    font-weight: bold;
+    color: #fff;
+    word-wrap: break-word;
+}
+
+.mail-description {
+    font-size: clamp(1rem, 2vw, 1.2rem); // Responsive description size
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Mobile and Tablet Adjustments */
+@media (max-width: 480px) {
+    .mail-container {
+        padding: 5vw;
+    }
+
+    .mail-heading {
+        font-size: clamp(1.8rem, 4vw, 3rem);
+    }
+
+    .mail-list {
+        width: 100%;
+    }
+
+    .mail-card {
+        padding: 4vw;
+        border-radius: 2vw;
+    }
+}

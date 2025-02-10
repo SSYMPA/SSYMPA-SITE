@@ -1,0 +1,211 @@
+
+
+.create-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+    color: #fff;
+    text-align: center;
+    padding: 50px 30px;
+    overflow-y: auto;
+    position: relative;
+    gap: 30px;
+    margin-left: 250px; // Space for navbar
+
+    @media (max-width: 1200px) {
+        margin-left: 200px; // Slightly reduce space for smaller screens
+    }
+
+    @media (max-width: 992px) {
+        margin-left: 150px; // Reduce for tablet screens
+    }
+
+    @media (max-width: 768px) {
+        margin-left: 100px; // Less margin for small tablets
+    }
+
+    @media (max-width: 576px) {
+        margin-left: 0; // Remove margin for mobile screens
+        padding: 30px 15px;
+    }
+}
+
+/* Title */
+.create-heading {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    margin: 30px 0;
+    padding: 1rem;
+    letter-spacing: 2px;
+    z-index: 2;
+
+    @media (max-width: 768px) {
+        font-size: 2.8rem;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 2.2rem;
+    }
+}
+
+/* Form Box */
+.create-form {
+    background: #264653;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 90%;
+    max-width: 700px;
+    overflow-y: auto;
+    max-height: 75vh;
+
+    @media (max-width: 768px) {
+        width: 95%;
+        padding: 30px;
+    }
+
+    @media (max-width: 576px) {
+        padding: 20px;
+        max-width: 100%;
+    }
+}
+
+/* Inputs, Selects, Textarea */
+.create-form input,
+.create-form select,
+.create-form textarea {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.7rem;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #000000;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 1.3rem;
+        padding: 12px;
+    }
+}
+
+/* Placeholder Styling */
+.create-form input::placeholder,
+.create-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.4rem;
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+    }
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 20px 30px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 30rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0px 8px 20px rgba(255, 126, 95, 0.5);
+    margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        font-size: 1.6rem;
+    }
+}
+
+/* Interactive Smooth Scrolling */
+.create-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.create-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.create-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #ff6a4a, #fd9843);
+    transform: scale(1.1);
+}
+
+.create-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+.create-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.expanding-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    animation: expandGlow 1.5s ease-in-out infinite alternate;
+    z-index: 9999;
+}
+
+.expanding-loader img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.6)); /* Initial Glow */
+    animation: glowEffect 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes expandGlow {
+    from {
+        width: 50px;
+        height: 50px;
+        opacity: 0.5;
+    }
+    to {
+        width: 250px;
+        height: 250px;
+        opacity: 1;
+    }
+}
+
+@keyframes glowEffect {
+    from {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
+    }
+    to {
+        filter: drop-shadow(0 0 40px rgba(255, 255, 255, 1));
+    }
+}

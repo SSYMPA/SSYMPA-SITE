@@ -1,0 +1,49 @@
+/* Ensure body and html can scroll */
+html, body {
+    height: auto; 
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main layout container */
+.content {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    min-height: 100vh;  /* Allows page to extend and scroll */
+}
+
+/* Watermark logo positioning */
+.watermark-logo {
+    position: fixed; /* Keeps it in place */
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    opacity: 0.1;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Company Logo */
+.ssympa-logo {
+    height: auto;
+    position: absolute; 
+    right: 20rem;  
+    top: 70%;
+    transform: translate(50%, -50%);
+    z-index: 2;
+}
+
+.copyright-bar {
+    width: 100%;
+    background: #222; 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }

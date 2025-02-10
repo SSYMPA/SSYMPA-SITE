@@ -1,0 +1,43 @@
+.logo-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 30%;
+    right: -50vw;
+    width: 100vw;
+    height: auto;
+    animation: reveal-logo 2s forwards ease-in-out;
+    transform: translate(43rem, -40rem);
+    z-index: -1; 
+  }
+  
+  .solid-logo {
+    width: 150%;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.8));
+    animation: glow-animation 3s infinite alternate;
+  }
+  
+  @keyframes reveal-logo {
+    0% {
+      right: -50vw;
+      opacity: 0;
+    }
+    100% {
+      right: -10vw;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes glow-animation {
+    0% {
+      filter: drop-shadow(0 0 70px rgba(255, 255, 255, 0.181));
+    }
+    50% {
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.754));
+    }
+    100% {
+      filter: drop-shadow(0 0 700px rgb(255, 255, 255));
+    }
+  }
